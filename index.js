@@ -6,8 +6,9 @@ const currentNodeVersion = process.versions.node;
 const currVer = currentNodeVersion.split(".");
 const major = currVer[0];
 
+const { logger } = require("./src/utils/logger");
 if (major < 14) {
-  console.error(
+  logger.error(
     "You are running Node " +
       currentNodeVersion +
       ".\n" +
@@ -17,6 +18,6 @@ if (major < 14) {
   process.exit(1);
 }
 
-const { init } = require("./setupProject");
+const { init } = require("./src/main/init");
 
 init();
