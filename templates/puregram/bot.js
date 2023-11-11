@@ -13,7 +13,6 @@ const { help_message } = require("./src/data/config.js");
 // setup command hanlders
 bot.updates.on("message", (ctx) => {
   if ((ctx.entities[0].type == "bot_command")){
-
     if (ctx.text && ctx.text.startsWith("/start")) {
       return ctx.send("Hello, How may I be of service?");
     } else if (ctx.text && ctx.text.startsWith("/help")) {

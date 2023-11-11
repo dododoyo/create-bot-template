@@ -2,10 +2,7 @@
 
 const TelegramBot = require("node-telegram-bot-api");
 
-// const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
-const bot = new TelegramBot("6642856793:AAHbuY1AKlqIseezDlUwrHcmMZkUhBEOFbw", {
-  polling: true,
-});
+const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 
 // start command
 const start_command = require("./src/commands/start.js");

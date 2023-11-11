@@ -2,8 +2,7 @@
 
 const TeleBot = require('telebot');
 
-// const bot = new TeleBot(process.env.BOT_TOKEN);
-const bot = new TeleBot("6642856793:AAHbuY1AKlqIseezDlUwrHcmMZkUhBEOFbw");
+const bot = new TeleBot(process.env.BOT_TOKEN);
 
 // start command
 const start_command = require("./src/commands/start.js");

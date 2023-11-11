@@ -1,53 +1,54 @@
-# create-telegraf-bot
+# create-telegrambot
+
 A simple package to create template files for a Telegram Bot.
 
 ## Installation
 
 You don't need to install this package locally. You can use `npx` to run it directly:
 
-```bash
-npx create-telegraf-bot <name-of-your-bot>
-```
-
-Replace `<name-of-your-bot>` with your actual bot token.
-
-For instance,
-```bash
-npx create-telegraf-bot chat-bot
-```
-
 ## Usage
 
-After running the above command, the package will create the necessary template files for your Telegram bot.
+### Case-1 ( both name of wrapper and project  entered ) 
+
+```bash
+npx create-telegrambot <name-of-wrappert> <name-of-your-bot>
+```
+`npx create-telegrambot <name-of-wrappert> <name-of-your-bot>`: This command will create a new directory with the name `<name-of-your-bot>` and generate the necessary template files for a Telegram bot based on the wrapper that will be used to create the bot.  `Please ensure the name is unique and does not conflict with existing directories.`
+
+> Example = `create-telegrambot telegraf first-bot`
+
+### Case-2  (only name of the wrapper is entered )
+
+```bash
+npx create-telegrambot <name-of-wrappert>
+```
+
+`npx create-telegrambot <name-of-your-bot>`: This command will create a prompt for the user to specify the name of project (e.g. `my-bot`) and generate the necessary template files for the bot. The `<name-of-your-bot>` argument is required and is used to specify the name of the directory that will be created. `Please ensure the name is unique and does not conflict with existing directories.`
+
+> Example = `create-telegrambot grammy`
+
+### Case-3 (with no entries)
+
+```bash
+npx create-telegrambot 
+```
+`npx create-telegrambot`: This command will create a prompt for the user to specify the name of project (e.g. `my-bot`) and the type of wrapper to use and generate the necessary template files for the bot based on the inputs. `Please ensure the name is unique and does not conflict with existing directories.`
+
+> Inside `.env` replace `<name-of-your-bot>` with your actual bot token.
+
+
+After running the above commands, the package will create the necessary template files for your Telegram bot.
 
 ```bash
 cd <name-of-your-bot>
 ```
 
-For our instance used previously,
-```bash
-cd chat-bot
-```
+After navigating to your bot's directory with `cd <name-of-your-bot>`, you should find a README file inside. This README contains specific instructions and information about the bot template that has been generated.
 
-### To start the bot, follow these steps:
+To read the README, you can use a text editor or a markdown viewer. If you're using Visual Studio Code, you can simply open the README file in it and use the built-in markdown preview feature.
 
-1. **Set Up Environment Variables**: In the `.env` file of your project root directory add your bot token like so:
+Please make sure to read the README carefully as it contains important information about how to configure and use your new bot.
 
-```env
-BOT_TOKEN=<your_bot_token_here>
-```
-
-Replace `<your_bot_token_here>` with your actual bot token.
-
-2. **Start the Bot**: Now, you can start the bot by running the `bot.js` file with Node.js. In your terminal, run:
-
-```bash
-node bot.js
-```
-
-After running this command, you should see the message "Starting bot" in your terminal. The bot is now running and will respond to `/start` and `/help` commands sent to the bot from Telegram.
-
-Remember to replace `<your_bot_token_here>` with the token you received from BotFather when you created your bot on Telegram.
 
 ## Contributing
 
