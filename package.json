@@ -1,0 +1,36 @@
+{
+  "name": "create-telegrambot",
+  "version": "1.0.0",
+  "description": "Simple Telegram Bot Dev Boilerplate Generator",
+  "main": "index.js",
+  "bin": {
+    "create-telegrambot": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dododoyo/create-telegrambot.git"
+  },
+  "keywords": [
+    "[\"telegram\"",
+    "\"telegram-bot\"",
+    "\"bot\"",
+    "\"bot-framework\"",
+    "\"bot-development\"",
+    "\"npm-package\"",
+    "\"nodejs\"",
+    "\"npm\"",
+    "\"javascript\"",
+    "\"template\"",
+    "\"generator\"",
+    "\"boilerplate\"]"
+  ],
+  "author": "Dolphin Mulugeta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dododoyo/create-telegrambot/issues"
+  },
+  "homepage": "https://github.com/dododoyo/create-telegrambot#readme"
+}
