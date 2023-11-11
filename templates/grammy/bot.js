@@ -1,4 +1,4 @@
-// require("dotenv").config();
+require("dotenv").config();
 const { Bot } = require("grammy");
 
 const bot = new Bot(process.env.BOT_TOKEN);
@@ -14,7 +14,13 @@ help_command(bot);
 async function start_bot() {
   try {
     console.log("Starting bot. . .");
-    await bot.start();
+    bot
+      .start()
+      .then((res) => {})
+      .catch((err) => {
+        console.log("Something went wrong when starting bot");
+        console.log(err);
+      });
   } catch (err) {
     console.log("An Error Ocurred: Restarting Bot");
     console.log(err);
