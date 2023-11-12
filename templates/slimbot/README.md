@@ -8,13 +8,13 @@ touch .env
 ```
 - Once the file is created, get your bot token from [BotFather](https://t.me/botfather):
 
-- If the bot token received from [BotFather](https://t.me/botfather) was `123456789:aBcdEFgHIJklMnOpQRstUV` variable inside `.env` file should look like this.
+- If the bot token received from [BotFather](https://t.me/botfather) was `123456789:aBcdEFgHIJklMnOpQRstUV`, set BOT_TOKEN variable inside `.env` file like so.
 
 ```env
 BOT_TOKEN=123456789:aBcdEFgHIJklMnOpQRstUV
 ```
 
-2. **Start the Bot**: Now, you can start the bot by running the `bot.js` file with Node.js. In your terminal, run:
+1. **Start the Bot**: Now, you can start the bot by running the `bot.js` file with Node.js. In your terminal, run:
 
 ```bash
 node bot.js
