@@ -1,12 +1,7 @@
-const readline = require("readline");
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
 const { logger } = require("../utils/logger");
 const isValidFileName = require("../validation/isValidFileName")
 
-async function getFileName() {
+async function getFileName(rl) {
   return new Promise((resolve) => {
     function askFileName() {
       rl.question("Please enter the file name: ", async (fileName) => {

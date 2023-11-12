@@ -1,12 +1,7 @@
-const readline = require("readline");
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
 const { supported_wrappers } = require("../config/config");
 const { logger } = require("../utils/logger");
 
-async function getWrapperType() {
+async function getWrapperType(rl) {
   return new Promise((resolve) => {
     function askWrapperType() {
       supported_wrappers.forEach((wrapper, index) => {

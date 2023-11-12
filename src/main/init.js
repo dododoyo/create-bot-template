@@ -27,11 +27,11 @@ async function init() {
   if (command.length == 4) {
     if (!isValidWrapper(wrapperName)) {
       logger.error("Wrapper is Incorrect/Unsupported.");
-      wrapperName = await getWrapperType();
+      wrapperName = await getWrapperType(rl);
     }
     if (!isValidFileName(dirName)) {
       logger.error("Invalid file name.");
-      dirName = await getFileName();
+      dirName = await getFileName(rl);
     }
 
     copyFile(dirName, wrapperName);
@@ -41,16 +41,16 @@ async function init() {
     wrapperName = command[2];
     if (!isValidWrapper(wrapperName)) {
       logger.error("Wrapper is Incorrect/Unsupported.");
-      wrapperName = await getWrapperType();
+      wrapperName = await getWrapperType(rl);
     }
-    dirName = await getFileName();
+    dirName = await getFileName(rl);
 
     copyFile(dirName, wrapperName);
     initializeProject(dirName, wrapperName);
   }
   if (command.length == 2) {
-    wrapperName = await getWrapperType();
-    dirName = await getFileName();
+    wrapperName = await getWrapperType(rl);
+    dirName = await getFileName(rl);
 
     copyFile(dirName, wrapperName);
     initializeProject(dirName, wrapperName);
