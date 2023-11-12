@@ -5,7 +5,8 @@
 ```env
 BOT_TOKEN=<your_bot_token_here>
 ```
-Replace `your_bot_token_here` with your actual bot token.
+
+Replace `<your_bot_token_here>` with your actual bot token.
 
 - If the bot token received from [BotFather](https://t.me/botfather) was `123456789:aBcdEFgHIJklMnOpQRstUV` your `.env` file should look like this.
 

@@ -6,7 +6,7 @@
 BOT_TOKEN=<your_bot_token_here>
 ```
 
-Replace `your_bot_token_here` with your actual bot token.
+Replace `<your_bot_token_here>` with your actual bot token.
 
 - If the bot token received from [BotFather](https://t.me/botfather) was `123456789:aBcdEFgHIJklMnOpQRstUV` your `.env` file should look like this.
 
@@ -14,7 +14,7 @@ Replace `your_bot_token_here` with your actual bot token.
 BOT_TOKEN=123456789:aBcdEFgHIJklMnOpQRstUV
 ```
 
-2. **Start the Bot**: Now, you can start the bot by running the `bot.js` file with Node.js. In your terminal, run:
+1. **Start the Bot**: Now, you can start the bot by running the `bot.js` file with Node.js. In your terminal, run:
 
 ```bash
 node bot.js

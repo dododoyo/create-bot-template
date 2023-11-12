@@ -7,7 +7,7 @@
 BOT_TOKEN=<your_bot_token_here>
 ```
 
-Replace `your_bot_token_here` with your actual bot token.
+Replace `<your_bot_token_here>` with your actual bot token.
 
 - If the bot token received from [BotFather](https://t.me/botfather) was `123456789:aBcdEFgHIJklMnOpQRstUV` your `.env` file should look like this.
 
@@ -15,7 +15,7 @@ Replace `your_bot_token_here` with your actual bot token.
 BOT_TOKEN=123456789:aBcdEFgHIJklMnOpQRstUV
 ```
 
-2. **Set up package.json fields**: 
+1. **Set up package.json fields**: 
 
 - Edit the `main` field in the `package.json` file to "src/main.ts".
 
