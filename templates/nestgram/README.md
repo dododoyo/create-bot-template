@@ -1,12 +1,19 @@
+
 ### To start the bot, follow these steps:
 
-1. **Set Up Environment Variables**: In the .env file of your project root directory add your bot token like so:
+1. **Set Up Environment Variables**: In the .env file located in your project's root directory add your bot token as follows:
 
 ```env
 BOT_TOKEN=<your_bot_token_here>
 ```
 
 Replace `your_bot_token_here` with your actual bot token.
+
+- If the bot token received from [BotFather](https://t.me/botfather) was `123456789:aBcdEFgHIJklMnOpQRstUV` your `.env` file should look like this.
+
+```env
+BOT_TOKEN=123456789:aBcdEFgHIJklMnOpQRstUV
+```
 
 2. **Set up package.json fields**: 
 
@@ -34,6 +41,12 @@ Replace `your_bot_token_here` with your actual bot token.
 npm run dev
 ```
 
-After running this command, you should see the message "Starting bot" in your terminal. The bot is now running and will respond to `/start` and `/help` commands sent to the bot from telegram.
+- After running this command, you may see a message saying "Starting bot" or no message at all depending on the wrapper. 
 
-Remember to replace `your_bot_token_here` with the token you received from BotFather when you created your bot on Telegram.
+- The bot is now running and will respond to `/start` and `/help` commands sent from Telegram.
+
+- To ensure that the bot is working correctly, send `/start` and `/help` commands from you Telegram account to the bot. You should receive appropriate responses. 
+
+- For further reference check [Nestgram's Website](https://degreetpro.gitbook.io/nestgram/guide)
+
+- If you encounter any errors while starting bot feel free to contact the [developer]((https://t.me/dododoyo)) or create an [issue](https://github.com/dododoyo/create-bot-template/issues) on github.
