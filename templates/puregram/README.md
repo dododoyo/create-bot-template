@@ -1,14 +1,14 @@
 ### To start the bot, follow these steps:
 
-1. **Set Up Environment Variables**: In the .env file located in your project's root directory add your bot token as follows:
+1. **Create and Set Up Environment Variables**:
 
-```env
-BOT_TOKEN=<your_bot_token_here>
+- Create a `.env` file in your project's root directory. 
+```bash
+touch .env
 ```
+- Once the file is created, get your bot token from [BotFather](https://t.me/botfather):
 
-Replace `<your_bot_token_here>` with your actual bot token.
-
-- If the bot token received from [BotFather](https://t.me/botfather) was `123456789:aBcdEFgHIJklMnOpQRstUV` your `.env` file should look like this.
+- If the bot token received from [BotFather](https://t.me/botfather) was `123456789:aBcdEFgHIJklMnOpQRstUV` variable inside `.env` file should look like this.
 
 ```env
 BOT_TOKEN=123456789:aBcdEFgHIJklMnOpQRstUV
