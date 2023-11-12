@@ -9,6 +9,8 @@ const initializeProject = (newFileName, selectedWrapperName) => {
       stdio: "inherit",
     });
     logger.success("Successfully initialized npm package.\n");
+
+    logger.info("Installing dependencies\n");
     child_process.execSync(`cd ${newFileName} && npm install dotenv`, {
       stdio: "inherit",
     });

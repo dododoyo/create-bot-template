@@ -8,14 +8,16 @@ You don't need to install this package locally. You can use `npx` to run it dire
 
 ## Usage
 
-### Case-1 ( both name of wrapper and project  entered ) 
+### Case-1 ( both wrapper name and project name entered) 
 
 ```bash
-npx create-bot-template <name-of-wrappert> <name-of-bot>
+npx create-bot-template <name-of-wrapper> <name-of-bot>
 ```
-`npx create-bot-template <name-of-wrapper> <name-of-bot>`: This command will create a new directory with the name `<name-of-bot>` and generate the necessary template files for a Telegram bot based on the wrapper that will be used to create the bot. **Please ensure the name is unique and does not conflict with existing directories.**
+`npx create-bot-template <name-of-wrapper> <name-of-bot>`: This command will create a new directory with the name `<name-of-bot>` and generate the necessary template files for a Telegram bot based on the wrapper chosen by the user. **Please ensure the name of project is unique and does not conflict with existing directories.**
 
-> Example = `create-bot-template telegraf first-bot`
+> Example: `create-bot-template telegraf first-bot`
+
+- This command creates a folder named 'first-bot'. This folder contains template files for coding with the Telegraf wrapper.
 
 ### Case-2  (only name of the wrapper is entered )
 
@@ -23,7 +25,7 @@ npx create-bot-template <name-of-wrappert> <name-of-bot>
 npx create-bot-template <name-of-wrapper>
 ```
 
-`npx create-bot-template <name-of-bot>`: This command will create a prompt for the user to specify the name of project (e.g. `my-bot`) and generate the necessary template files for the bot. The `<name-of-bot>` argument is required and is used to specify the name of the directory that will be created. **Please ensure the name is unique and does not conflict with existing directories.**
+`npx create-bot-template <name-of-wrapper>`: This command will create a prompt for the user to specify the name of project (e.g. `my-bot`) and generate the necessary template files for the bot. The `<name-of-bot>` argument is required and is used to specify the name of the directory that will be created. **Please ensure the name is unique and does not conflict with existing directories.**
 
 > Example = `create-bot-template grammy`
 
@@ -32,12 +34,10 @@ npx create-bot-template <name-of-wrapper>
 ```bash
 npx create-bot-template 
 ```
-`npx create-bot-template`: This command will create a prompt for the user to specify the name of project (e.g. `my-bot`) and the type of wrapper to use and generate the necessary template files for the bot based on the inputs. **Please ensure the name is unique and does not conflict with existing directories.**
-
-> Inside `.env` replace `<name-of-bot>` with your actual bot token.
+`npx create-bot-template`: This command will create a prompt for the user to enter the type of wrapper to use and specify the name of project (e.g. `my-bot`) and generates the necessary template files for the bot based on the inputs. **Please ensure the name is unique and does not conflict with existing directories.**
 
 
-After running the above commands, the package will create the necessary template files for your Telegram bot.
+After running one of the above commands, the package will create the necessary template files for your Telegram bot.
 
 ```bash
 cd <name-of-bot>
@@ -48,7 +48,6 @@ After navigating to your bot's directory with `cd <name-of-bot>`, you should fin
 To read the README, you can use a text editor or a markdown viewer. If you're using Visual Studio Code, you can simply open the README file in it and use the built-in markdown preview feature.
 
 Please make sure to read the README carefully as it contains important information about how to configure and use your new bot.
-
 
 ## Contributing
 

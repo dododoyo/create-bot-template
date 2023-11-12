@@ -1,8 +1,12 @@
-import { Service } from 'nestgram';
+import { Service } from "nestgram";
+import { help_message } from "./data/config";
 
 @Service()
 export class AppService {
-  get helloWorldMessage(): string {
-    return 'Hello, world!';
+  get startMessage(): string {
+    return "Hello, How may I be of service?";
+  }
+  get helpMessage(): string {
+    return help_message;
   }
 }
