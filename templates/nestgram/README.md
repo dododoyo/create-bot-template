@@ -40,7 +40,14 @@ BOT_TOKEN=123456789:aBcdEFgHIJklMnOpQRstUV
 npm run dev
 ```
 
-- After running this command, you may see a message saying "Starting bot" or no message at all depending on the wrapper. 
+- After running this command, you may see a confirmation messages like so
+  
+```bash
+[NestGram, log-time] Bot initialized
+[NestGram, log-time] Entry module configured
+[NestGram, log-time] Starting bot...
+[NestGram, log-time] Bot started on @telegrambot
+```
 
 - The bot is now running and will respond to `/start` and `/help` commands sent from Telegram.
 

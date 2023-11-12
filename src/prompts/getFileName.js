@@ -16,7 +16,7 @@ async function getFileName() {
           logger.error("Invalid characters in file name.\n");
           askFileName();
         } else {
-          logger.success(`Selected ${fileName}\n`);
+          logger.success(`Selected ${fileName}\n as file name.`);
           resolve(fileName);
         }
       });

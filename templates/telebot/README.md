@@ -20,7 +20,14 @@ BOT_TOKEN=123456789:aBcdEFgHIJklMnOpQRstUV
 node bot.js
 ```
 
-- After running this command, you will see a message saying "Starting bot. . ." with no error logs. This implies the bot is now running and will respond to `/start` and `/help` commands sent from Telegram.
+- After running this command, you will see a message the following log messages.
+   
+```bash
+[bot.plugin] loaded 'regExpMessage' plugin
+[bot.plugin] loaded 'shortReply' plugin
+[bot.info] bot started
+```
+- This implies the bot is now running and will respond to `/start` and `/help` commands sent from Telegram.
 
 - To ensure that the bot is working correctly, send `/start` and `/help` commands from you Telegram account to the bot. You should receive appropriate responses. 
 
