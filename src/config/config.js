@@ -1,7 +1,7 @@
 const supported_wrappers = [
   "grammy",
   "nestgram",
-  "nodetelegram",
+  "node_telegram",
   "puregram",
   "slimbot",
   "telebot",
@@ -20,7 +20,7 @@ const wrapper_dependencies = {
     "ts-node",
     "nestgram",
   ],
-  nodetelegram: ["node-telegram-bot-api"],
+  node_telegram: ["node-telegram-bot-api"],
   puregram: ["puregram"],
   slimbot: ["slimbot"],
   telebot: ["telebot"],

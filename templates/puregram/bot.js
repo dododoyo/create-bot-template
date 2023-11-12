@@ -15,7 +15,7 @@ bot.updates.on("message", (ctx) => {
     if (ctx.text && ctx.text.startsWith("/start")) {
       return ctx.send("Hello 👋, How may I be of service? 😊");
     } 
-    else if (ctx.text && ctx.text.startsWith("/help")) {
+    if (ctx.text && ctx.text.startsWith("/help")) {
       return ctx.send(help_message);
     }
   }

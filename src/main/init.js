@@ -32,7 +32,7 @@ async function init() {
     }
     const isValidName = await isValidFileName(dirName);
     if (isValidName !== true) {
-         logger.error(`Invalid character " ${isValidName} " in file name.\n`);
+        logger.error(`Invalid character " ${isValidName} " in file name.\n`);
       dirName = await getFileName(rl);
     }
 

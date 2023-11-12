@@ -20,7 +20,7 @@ BOT_TOKEN=123456789:aBcdEFgHIJklMnOpQRstUV
 node bot.js
 ```
 
-- After running this command, you will see a message the following log messages.
+- After running this command, you will see the following logs.
    
 ```bash
 [bot.plugin] loaded 'regExpMessage' plugin
