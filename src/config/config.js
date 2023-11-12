@@ -57,6 +57,7 @@ const invalidCharacters = [
   "'",
   "~",
   " ",
+  ".",
 ];
 
 module.exports = {

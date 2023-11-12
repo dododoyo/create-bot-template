@@ -2,7 +2,7 @@
 const child_process = require("child_process");
 const { logger } = require("../utils/logger");
 const {wrapper_dependencies} = require("../config/config.js")
-const initializeProject = (newFileName, selectedWrapperName) => {
+async function initializeProject (newFileName,selectedWrapperName) {
   // initialize a new npm project and install the required dependencies
   try {
     child_process.execSync(`cd ${newFileName} && npm init -y`, {
@@ -25,7 +25,7 @@ const initializeProject = (newFileName, selectedWrapperName) => {
       logger.success(`Successfully installed ${eachDependency}.`);
     });
     logger.log()
-    logger.success("Succesfully created template!");
+    logger.success("Successfully created template!");
   } catch (error) {
     logger.error("Failed to install telegraf in the new project.");
     logger.realError(error);

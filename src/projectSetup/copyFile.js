@@ -32,7 +32,7 @@ const copyInnerDir = (src, dest) => {
   }
 };
 
-function copyFile(fileName, selectedWrapper) {
+async function copyFile(fileName, selectedWrapper) {
   const newDirPath = path.join(process.cwd(), fileName);
   // create the new directory and its contents
   fs.mkdir(newDirPath, { recursive: true }, (err) => {

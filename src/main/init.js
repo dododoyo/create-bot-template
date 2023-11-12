@@ -25,12 +25,14 @@ async function init() {
   let wrapperName = command[2];
   let dirName = command[3];
   if (command.length == 4) {
-    if (!isValidWrapper(wrapperName)) {
+    const isValidWrapperName = await isValidWrapper(wrapperName);
+    if (!isValidWrapperName) {
       logger.error("Wrapper is Incorrect/Unsupported.");
       wrapperName = await getWrapperType(rl);
     }
-    if (!isValidFileName(dirName)) {
-      logger.error("Invalid file name.");
+    const isValidName = await isValidFileName(dirName);
+    if (isValidName !== true) {
+         logger.error(`Invalid character " ${isValidName} " in file name.\n`);
       dirName = await getFileName(rl);
     }
 
@@ -39,7 +41,8 @@ async function init() {
   }
   if (command.length == 3) {
     wrapperName = command[2];
-    if (!isValidWrapper(wrapperName)) {
+    const isValidWrapperName = await isValidWrapper(wrapperName);
+    if (!isValidWrapperName) {
       logger.error("Wrapper is Incorrect/Unsupported.");
       wrapperName = await getWrapperType(rl);
     }
@@ -58,7 +61,6 @@ async function init() {
   rl.close();
 }
 
-// export the init function for use in other modules
 module.exports = {
   init,
 };

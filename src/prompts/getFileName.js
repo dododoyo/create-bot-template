@@ -4,14 +4,15 @@ const isValidFileName = require("../validation/isValidFileName")
 async function getFileName(rl) {
   return new Promise((resolve) => {
     function askFileName() {
-      rl.question("Please enter the file name: ", async (fileName) => {
-        const isInvalid = await isValidFileName(fileName);
-        console.log();
-        if (isInvalid) {
-          logger.error("Invalid characters in file name.\n");
+      rl.question("Please enter file name: ", async (fileName) => {
+        console.log(fileName);
+        const isValid = await isValidFileName(fileName);
+     
+        if (isValid !== true) {
+          logger.error(`Invalid character " ${isValid} " in file name.\n`);
           askFileName();
         } else {
-          logger.success(`Selected ${fileName}\n as file name.`);
+          logger.success(`Selected ${fileName} as file name.`);
           resolve(fileName);
         }
       });
