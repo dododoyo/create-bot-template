@@ -1,5 +1,5 @@
 # create-bot-template
-
+[![Node.js Package](https://github.com/dododoyo/create-bot-template/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/dododoyo/create-bot-template/actions/workflows/npm-publish.yml)
 
 **A simple package to create template files for a Telegram Bot.**
 
