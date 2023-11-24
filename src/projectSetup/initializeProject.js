@@ -1,9 +1,7 @@
-// import the built-in child_process module to spawn child processes
 const child_process = require("child_process");
 const { logger } = require("../utils/logger");
 const {wrapper_dependencies} = require("../config/config.js")
 async function initializeProject (newFileName,selectedWrapperName) {
-  // initialize a new npm project and install the required dependencies
   try {
     child_process.execSync(`cd ${newFileName} && npm init -y`, {
       stdio: "inherit",
