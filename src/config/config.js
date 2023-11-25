@@ -7,6 +7,8 @@ const supported_js_wrappers = [
   "telebot",
   "telegraf",
 ];
+// inside config
+const supported_py_wrappers = ["python-telegram-bot", "PyTelegramBotAPI"];
 
 const wrapper_dependencies = {
   grammy: ["grammy"],
@@ -62,6 +64,7 @@ const invalidCharacters = [
 
 module.exports = {
   supported_js_wrappers,
+  supported_py_wrappers,
   invalidCharacters,
   wrapper_dependencies,
 };
