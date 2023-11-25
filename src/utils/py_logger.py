@@ -48,18 +48,18 @@ class Logger:
         print(*texts)
 
     def success(self, *texts):
-        print(f"\033[92m[BOT-TEMPLATE, {self.build_time()}]", *texts, "\033[0m")  # Green
+        print(f"\033[92m[BOT-TEMPLATE,{self.build_time()}]", "\033[0m", *texts)  # Green
 
     def info(self, *texts):
-        print(f"\033[93m[BOT-TEMPLATE, {self.build_time()}]", *texts, "\033[0m")  # Yellow
+        print(f"\033[93m[BOT-TEMPLATE,{self.build_time()}]", "\033[0m", *texts)  # Yellow
 
     def question(self, *texts):
-        print(f"\033[94m[BOT-TEMPLATE, {self.build_time()}]", *texts, "\033[0m")  # Blue
+        print(f"\033[94m[BOT-TEMPLATE,{self.build_time()}]", "\033[0m", *texts)  # Blue
 
     def error(self, *texts):
-        print(f"\033[91m[BOT-TEMPLATE, {self.build_time()}]", *texts, "\033[0m")  # Red
+        print(f"\033[91m[BOT-TEMPLATE,{self.build_time()}]", "\033[0m", *texts)  # Red
 
     def real_error(self, *texts):
-        print("\033[41m[RealError]:", *texts, "\n\033[0m")  # White text with Red background
+        print("\033[41m[RealError]:", "\n\033[0m", *texts)  # White text with Red background
 
 logger = Logger()

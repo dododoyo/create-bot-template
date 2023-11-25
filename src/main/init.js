@@ -7,7 +7,7 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-const isValidWrapper = require("../validation/isValidWrapper");
+const isValidJSWrapper = require("../validation/isValidJSWrapper");
 const isValidFileName = require("../validation/isValidFileName");
 const getFileName = require("../prompts/getFileName");
 const getWrapperType = require("../prompts/getWrapperType");
@@ -25,8 +25,8 @@ async function init() {
   let wrapperName = command[2];
   let dirName = command[3];
   if (command.length == 4) {
-    const isValidWrapperName = await isValidWrapper(wrapperName);
-    if (!isValidWrapperName) {
+    const isValidJSWrapperName = await isValidJSWrapper(wrapperName);
+    if (!isValidJSWrapperName) {
       logger.error("Wrapper is Incorrect/Unsupported.");
       wrapperName = await getWrapperType(rl);
     }
@@ -41,8 +41,8 @@ async function init() {
   }
   if (command.length == 3) {
     wrapperName = command[2];
-    const isValidWrapperName = await isValidWrapper(wrapperName);
-    if (!isValidWrapperName) {
+    const isValidJSWrapperName = await isValidJSWrapper(wrapperName);
+    if (!isValidJSWrapperName) {
       logger.error("Wrapper is Incorrect/Unsupported.");
       wrapperName = await getWrapperType(rl);
     }

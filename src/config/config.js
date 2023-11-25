@@ -1,4 +1,4 @@
-const supported_wrappers = [
+const supported_js_wrappers = [
   "grammy",
   "nestgram",
   "node_telegram",
@@ -61,7 +61,7 @@ const invalidCharacters = [
 ];
 
 module.exports = {
-  supported_wrappers,
+  supported_js_wrappers,
   invalidCharacters,
   wrapper_dependencies,
 };
