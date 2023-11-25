@@ -1,6 +1,6 @@
 // enable strict mode to catch common coding mistakes and unsafe actions
 "use strict";
-const { logger } = require("../utils/logger");
+const { logger } = require("../utils/js_logger");
 const readline = require("readline");
 const rl = readline.createInterface({
   input: process.stdin,

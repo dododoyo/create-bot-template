@@ -6,7 +6,7 @@ const currentNodeVersion = process.versions.node;
 const currVer = currentNodeVersion.split(".");
 const major = currVer[0];
 
-const { logger } = require("./src/utils/logger");
+const { logger } = require("./src/utils/js_logger");
 if (major < 12) {
   logger.error(
     "You are running Node " +

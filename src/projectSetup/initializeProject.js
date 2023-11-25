@@ -1,5 +1,5 @@
 const child_process = require("child_process");
-const { logger } = require("../utils/logger");
+const { logger } = require("../utils/js_logger");
 const {wrapper_dependencies} = require("../config/config.js")
 async function initializeProject (newFileName,selectedWrapperName) {
   try {

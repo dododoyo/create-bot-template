@@ -1,5 +1,5 @@
 const { supported_wrappers } = require("../config/config");
-const { logger } = require("../utils/logger");
+const { logger } = require("../utils/js_logger");
 
 async function getWrapperType(rl) {
   return new Promise((resolve) => {

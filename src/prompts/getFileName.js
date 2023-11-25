@@ -1,4 +1,4 @@
-const { logger } = require("../utils/logger");
+const { logger } = require("../utils/js_logger");
 const isValidFileName = require("../validation/isValidFileName")
 
 async function getFileName(rl) {
@@ -7,7 +7,6 @@ async function getFileName(rl) {
       rl.question("Please enter file name: ", async (fileName) => {
         console.log(fileName);
         const isValid = await isValidFileName(fileName);
-     
         if (isValid !== true) {
           logger.error(`Invalid character " ${isValid} " in file name.\n`);
           askFileName();
