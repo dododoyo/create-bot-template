@@ -2,6 +2,9 @@ const fs = require("fs");
 const path = require("path");
 
 const { logger } = require("../utils/js_logger");
+const {supported_js_wrappers} = require("../config/config");
+const {supported_ts_wrappers} = require("../config/config");
+const {supported_py_wrappers} = require("../config/config");
 
 const copyInnerDir = (src, dest) => {
   fs.mkdirSync(dest, { recursive: true });
@@ -27,10 +30,27 @@ async function copyFile(fileName, selectedWrapper) {
       console.error(`Could not create the directory ${fileName}.`, err);
       process.exit(1);
     }
-    const templatesDir = path.join(
-      __dirname,
-      `../../templates/${selectedWrapper}`
-    );
+    let templatesDir = null;
+    if (supported_js_wrappers.includes(selectedWrapper)) {
+          templatesDir = path.join(
+            __dirname,
+            `../../templates/javascript/${selectedWrapper}`
+          );
+    }
+    else if (supported_ts_wrappers.includes(selectedWrapper)) {
+          templatesDir = path.join(
+            __dirname,
+            `../../templates/typescript/${selectedWrapper}`
+          );
+    }
+    else if (supported_py_wrappers.includes(selectedWrapper)) {
+          templatesDir = path.join(
+            __dirname,
+            `../../templates/python/${selectedWrapper}`
+          );
+    }
+
+
     fs.readdir(templatesDir, (err, files) => {
       if (err) {
         logger.error("Could not list the directory.");

@@ -7,8 +7,10 @@ const supported_js_wrappers = [
   "telebot",
   "telegraf",
 ];
-// inside config
+const supported_ts_wrappers = ["grammy", "nestgram"];
 const supported_py_wrappers = ["python-telegram-bot", "PyTelegramBotAPI"];
+
+const supported_languages = ["python", "javascript", "typescript"];
 
 const wrapper_dependencies = {
   grammy: ["grammy"],
@@ -64,7 +66,9 @@ const invalidCharacters = [
 
 module.exports = {
   supported_js_wrappers,
+  supported_ts_wrappers,
   supported_py_wrappers,
+  supported_languages,
   invalidCharacters,
   wrapper_dependencies,
 };
