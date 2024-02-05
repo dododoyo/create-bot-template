@@ -21,6 +21,7 @@ const initializeProject = require("../projectSetup/initializeProject");
 // define a function to initialize a new Telegraf bot project
 async function init() {
   const command = process.argv;
+  let languageSelected = null;
 
   if (command.length > 4) {
     logger.error("Too many inputs.");
@@ -45,12 +46,12 @@ async function init() {
     } 
     else {
       logger.error("Wrapper is Incorrect/Unsupported.");
-      const languageSelected = await getLanguage(rl);
+      languageSelected = await getLanguage(rl);
       wrapperName = await getWrapperType(rl,languageSelected);
     }
 
-    copyFile(dirName, wrapperName);
-    initializeProject(dirName, wrapperName);
+    copyFile(dirName,languageSelected, wrapperName);
+    initializeProject(dirName,languageSelected, wrapperName);
   }
   if (command.length == 3) {
     wrapperName = command[2];

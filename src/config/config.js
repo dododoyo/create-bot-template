@@ -29,6 +29,8 @@ const wrapper_dependencies = {
   slimbot: ["slimbot"],
   telebot: ["telebot"],
   telegraf: ["telegraf"],
+  "python-telegram-bot": ["python-telegram-bot"],
+  PyTelegramBotAPI: ["PyTelegramBotAPI"],
 };
 
 const invalidCharacters = [

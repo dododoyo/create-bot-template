@@ -2,9 +2,9 @@ const fs = require("fs");
 const path = require("path");
 
 const { logger } = require("../utils/js_logger");
-const {supported_js_wrappers} = require("../config/config");
-const {supported_ts_wrappers} = require("../config/config");
-const {supported_py_wrappers} = require("../config/config");
+const { supported_js_wrappers } = require("../config/config");
+const { supported_ts_wrappers } = require("../config/config");
+const { supported_py_wrappers } = require("../config/config");
 
 const copyInnerDir = (src, dest) => {
   fs.mkdirSync(dest, { recursive: true });
@@ -14,7 +14,6 @@ const copyInnerDir = (src, dest) => {
   for (let entry of entries) {
     let srcPath = path.join(src, entry.name);
     let destPath = path.join(dest, entry.name);
-
     if (entry.isDirectory()) {
       copyInnerDir(srcPath, destPath);
     } else {
@@ -23,45 +22,27 @@ const copyInnerDir = (src, dest) => {
   }
 };
 
-async function copyFile(fileName, selectedWrapper) {
+async function copyFile(fileName, languageSelected, selectedWrapper) {
   const newDirPath = path.join(process.cwd(), fileName);
   fs.mkdir(newDirPath, { recursive: true }, (err) => {
     if (err) {
       console.error(`Could not create the directory ${fileName}.`, err);
       process.exit(1);
     }
-    let templatesDir = null;
-    if (supported_js_wrappers.includes(selectedWrapper)) {
-          templatesDir = path.join(
-            __dirname,
-            `../../templates/javascript/${selectedWrapper}`
-          );
-    }
-    else if (supported_ts_wrappers.includes(selectedWrapper)) {
-          templatesDir = path.join(
-            __dirname,
-            `../../templates/typescript/${selectedWrapper}`
-          );
-    }
-    else if (supported_py_wrappers.includes(selectedWrapper)) {
-          templatesDir = path.join(
-            __dirname,
-            `../../templates/python/${selectedWrapper}`
-          );
-    }
-
-
+    // let templatesDir = null;
+    const templatesDir = path.join(
+      __dirname,
+      `../../templates/${languageSelected}/${selectedWrapper}`
+    );
     fs.readdir(templatesDir, (err, files) => {
       if (err) {
         logger.error("Could not list the directory.");
         logger.realError(err);
         process.exit(1);
       }
-
       files.forEach((file) => {
         const sourcePath = path.join(templatesDir, file);
         const destPath = path.join(newDirPath, file);
-
         fs.stat(sourcePath, (err, stats) => {
           if (err) {
             logger.error(`Error reading ${file}.`);
